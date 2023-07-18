@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="condition.html" onsubmit="return validdata()">
+        <label for="">first name</label>
+        <input type="text" name="" id="name"><br><br><br>
+        <label for="">password</label>
+        <input type="password" name="" id="password"><br><br><br>
+        <label for="">email</label>
+        <input type="email" name="" id="email"><br><br><br>
+        <button onclick="validdata()">submit</button>
+    </form>
+</body>
+</html>
+<script>
+    function validdata() {
+        var name = document.getElementById("name").value;
+        if (name == "") {
+            alert("plz enter your name!")
+            document.getElementById('name').focus();
+            return false;
+        }
+        var name = document.getElementById("password").value;
+        if (name == "") {
+            alert("plz enter your password!")
+            document.getElementById('password').focus();
+            return false;
+        }
+        var name = document.getElementById("email").value;
+        if (name == "") {
+            alert("plz enter your email!")
+            document.getElementById('email').focus();
+            return false;
+        }
+    }
+</script>

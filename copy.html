@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Money Calculator</title>
+  <style>
+    .container {
+  margin-top: 20px;
+}
+
+input[type="number"] {
+  width: 200px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Money Calculator - 2000 Notes</h1>
+  <div class="container">
+    <label for="amount">Enter Amount:</label>
+    <input type="number" id="amount" min="0">
+    <button onclick="calculate()">Calculate</button>
+    <div id="result"></div>
+  </div>  
+</body>
+<script>
+    function calculate() {
+  var amountInput = document.getElementById("amount");
+  var amount = parseInt(amountInput.value);
+
+  if (isNaN(amount) || amount < 0) {
+    alert("Please enter a valid amount.");
+    return;
+  }
+
+  var note2000 = Math.floor(amount / 2000);
+  var remainingAmount = amount % 2000;
+
+  var result = document.getElementById("result");
+  result.innerHTML = "Number of 2000 notes: " + note2000 + "<br>" +
+                     "Remaining amount: " + remainingAmount;
+}
+
+</script>
+</html>

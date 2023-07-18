@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="a()">alert</button>
+    <script>
+        function a() {
+            alert("this is wrong page")
+        }
+    </script> -->
+
+    <p id="one"></p>
+    <button onclick="a()">password</button>
+    <script>
+        function a() {
+            var text
+            if (confirm("password correct")) {
+                text="your password is correct"
+            }else{
+                text="your password is not correct"
+            }
+            document.getElementById("one").innerHTML=text
+        }
+    </script>
+
+    <!-- <p id="one"></p>
+    <button onclick="a()">fhdhhho</button>
+    <script>
+        function a() {
+            var txt
+            var per = prompt("hellofhdfh")
+            if (per == "" || per == null) {
+                txt = "plz enter your name"
+            } else {
+                txt = "hii"  + per
+            }
+            document.getElementById("one").innerHTML=txt
+        }
+    </script> -->
+</body>
+</html>
